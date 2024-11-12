@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // Main Colors
+  static const Color first = Color.fromARGB(255, 2, 83, 68);
+  static const Color second = Color.fromARGB(255, 8, 146, 121);
+  static const Color third = Color.fromARGB(255, 17, 158, 132);
 
   static const Color kIndigoColor = Color(0xFF04305A);
   static const Color kBlueColor = Color(0xFF02243F);

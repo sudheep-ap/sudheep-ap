@@ -32,14 +32,98 @@ class _WorksContentState extends State<WorksContent>
     animController.forward();
   }
 
+  final List<Widget> imageSliders = [
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Hero(
+          tag: 'hero-tag',
+          child: Container(
+            // height: 100,
+            // width: 100,
+            color: AppColors.kAccentOrangeyolor,
+            child:
+                Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+          ),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset(
+            'assets/images/bg_image1.jpg',
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    ),
+    ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+      child: GestureDetector(
+        child: Container(
+          // height: 100,
+          // width: 100,
+          color: AppColors.kAccentOrangeyolor,
+          child: Image.asset('assets/images/bg_image1.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    ),
+  ];
   //  child: ClipPath(
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      decoration: const BoxDecoration(
-        color: AppColors.bgColor,
-      ),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -52,7 +136,7 @@ class _WorksContentState extends State<WorksContent>
                   fontFamily: AppFonts.monaSansBold,
                   color: AppColors.textWhiteColor)),
           kSizedBox30,
-          const Text(
+          Text(
             'Dive into my Flutter creations—a fusion of sleek design and powerful functionality. Explore how I bring ideas to life with elegance and precision.',
             style: TextStyle(
                 fontWeight: FontWeight.w800,
@@ -63,9 +147,31 @@ class _WorksContentState extends State<WorksContent>
             textAlign: TextAlign.center,
           ),
           kSizedBox30,
-          SlidingBanner()
+          SlidingBanner(),
+          kSizedBox150,
+          kSizedBox200,
+          kSizedBox80
         ],
       ),
     );
   }
 }
+
+
+
+     // ConstrainedBox(
+          //   constraints: const BoxConstraints(maxHeight: 200),
+          //   child: CarouselView(
+          //     itemSnapping: false,
+          //     itemExtent: 600,
+          //     shrinkExtent: 0,
+          //     padding: const EdgeInsets.all(10.0),
+          //     children: List.generate(
+          //       imageSliders.length,
+          //       (index) => imageSliders[index],
+
+          //       //   (index) => Image.asset(
+          //       // "images/${imageSliders[index]}",
+          //     ),
+          //   ),
+          // )

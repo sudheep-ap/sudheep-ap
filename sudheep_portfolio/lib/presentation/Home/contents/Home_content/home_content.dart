@@ -45,11 +45,10 @@ class _HomeContentState extends State<HomeContent>
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
-        color: AppColors.bgColor,
-        // image: DecorationImage(
-        //     fit: BoxFit.fill,
-        //     image: AssetImage('assets/gifs/circle_animation.gif'))
-      ),
+          color: AppColors.kElephantColor,
+          image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage('assets/gifs/circle_animation.gif'))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

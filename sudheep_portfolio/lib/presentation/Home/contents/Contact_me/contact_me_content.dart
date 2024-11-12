@@ -41,7 +41,7 @@ class _ContactMeContentState extends State<ContactMeContent>
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          kSizedBox40,
+          kSizedBox80,
           const Text('GET IN TOUCH',
               style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -71,6 +71,7 @@ class _ContactMeContentState extends State<ContactMeContent>
                               color: AppColors.textColor)))),
             ],
           ),
+          kSizedBox200, kSizedBox200
           //   CarouselSlider(
           //   items: ,
           //   //carouselController: _controller,

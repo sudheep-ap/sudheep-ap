@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../../Utils/constants/constants.dart';
@@ -12,7 +12,7 @@ class SlidingBanner extends StatefulWidget {
 
 class _SlidingBannerState extends State<SlidingBanner> {
   int _current = 0;
-  final CarouselController _controller = CarouselController();
+  // final CarouselController _controller = CarouselController();
 
   @override
   Widget build(BuildContext context) {
@@ -83,29 +83,29 @@ class _SlidingBannerState extends State<SlidingBanner> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CarouselSlider(
-            items: imageSliders,
-            carouselController: _controller,
-            options: CarouselOptions(
-                enlargeFactor: 0,
-                autoPlayInterval: Duration(seconds: 5),
-                height: 500,
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 2 / 2,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _current = index;
-                  });
-                }),
-          ),
+          // CarouselView(
+          //   items: imageSliders,
+          //   carouselController: _controller,
+          //   options: CarouselOptions(
+          //       enlargeFactor: 0,
+          //       autoPlayInterval: const Duration(seconds: 5),
+          //       height: 500,
+          //       autoPlay: true,
+          //       enlargeCenterPage: true,
+          //       aspectRatio: 2 / 2,
+          //       onPageChanged: (index, reason) {
+          //         setState(() {
+          //           _current = index;
+          //         });
+          //       }),
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: imageSliders.asMap().entries.map((entry) {
                 return GestureDetector(
-                  onTap: () => _controller.animateToPage(entry.key),
+                  onTap: () {}, // => _controller.animateToPage(entry.key),
                   child: Container(
                     height: 10.0,
                     width: _current == entry.key ? 40 : 10.0,
@@ -131,18 +131,20 @@ class _SlidingBannerState extends State<SlidingBanner> {
 // : kCategoryRupeeColor
 
 class EnlargedPage extends StatelessWidget {
+  const EnlargedPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Enlarged Page'),
+        title: const Text('Enlarged Page'),
       ),
       body: Hero(
         tag: 'hero-tag',
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.blue,
-            borderRadius: const BorderRadius.all(Radius.circular(60.0)),
+            borderRadius: BorderRadius.all(Radius.circular(60.0)),
           ),
           width: 100.0, // Enlarged width
           height: 800.0, // Enlarged height

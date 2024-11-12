@@ -44,30 +44,14 @@ class _ProfileContentState extends State<ProfileContent>
   @override
   Widget build(BuildContext context) {
     return Container(
+      // key: profileNavigatorKey,
+      height: MediaQuery.sizeOf(context).height,
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      decoration: const BoxDecoration(
-        // image: DecorationImage(
-        //   image: AssetImage('assets/images/bg_image7.jpg'),
-        //   fit: BoxFit.cover,
-        // ),
-        color: AppColors.bgColor,
-      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          kSizedBox40,
-          // SizedBox(
-          //   child: TextLiquidFill(
-          //       text: 'ABOUT ME',
-          //       waveColor: Colors.blueAccent,
-          //       boxBackgroundColor: AppColors.bgColor,
-          //       textStyle: const TextStyle(
-          //           fontWeight: FontWeight.w800,
-          //           fontSize: 22,
-          //           letterSpacing: 1,
-          //           fontFamily: AppFonts.monaSansBold,
-          //           color: AppColors.textWhiteColor)),
-          // ),
+          kSizedBox100,
+
           const Text('ABOUT ME',
               style: TextStyle(
                   fontWeight: FontWeight.w800,
@@ -80,98 +64,28 @@ class _ProfileContentState extends State<ProfileContent>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                  child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 45, horizontal: 35),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: FadeTransition(
-                  opacity: animController,
-                  child: SlideTransition(
-                    position: animOffset,
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      text: const TextSpan(
-                        //  "Greetings! I'm Sudheep AP, a Flutter Developer with over 2 years of hands-on experience. I specialize in creating user-centric and efficient mobile applications. My passion is to contribute to innovative projects, both as a freelancer and a valuable team member.",
-
-                        text: 'Greetings !\n\n',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 18,
-                            letterSpacing: 2,
-                            fontFamily: AppFonts.monaSansBold,
-                            color: AppColors.textColor),
-                        children: [
-                          TextSpan(
-                              text: "I'm ",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 17,
-                                  letterSpacing: 0.7,
-                                  fontFamily: AppFonts.monaSansLight,
-                                  color: AppColors.textColor)),
-                          TextSpan(
-                              text: " Sudheep A P ",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 17,
-                                  letterSpacing: 0.7,
-                                  fontFamily: AppFonts.monaSansLight,
-                                  color: AppColors.textWhiteColor)),
-                          TextSpan(
-                              text:
-                                  " a dedicated Flutter Developer with over 2 years of hands-on experience in creating robust and scalable mobile applications.\nMy passion lies in crafting clean, efficient, and user-friendly solutions that meet the evolving needs of the digital landscape.",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 17,
-                                  letterSpacing: 0.7,
-                                  fontFamily: AppFonts.monaSansLight,
-                                  color: AppColors.textColor)),
-                        ],
-                      ),
-                    ),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 45, horizontal: 35),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
                   ),
+                  child: FadeTransition(
+                      opacity: animController,
+                      child: SlideTransition(
+                        position: animOffset,
+                        child: const Text(
+                            "I'm a Flutter Developer with 3+ years of experience building high-performance, cross-platform mobile apps. Skilled in Flutter and Dart, I focus on creating smooth, efficient user experiences with clean code. Driven by Agile practices, I’m passionate about solving challenges and exploring new tech. I’m open to freelance projects and long-term roles, bringing dedication, responsiveness, and a commitment to quality to each collaboration. Let’s build something great together!",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 18,
+                                letterSpacing: 0.7,
+                                fontFamily: AppFonts.monaSansLight,
+                                color: AppColors.textColor)),
+                      )),
                 ),
-              )),
+              ),
 
-              // Expanded(
-              //   child: Container(
-              //     // height: 200,
-              //     // width: 500,
-              //     decoration: BoxDecoration(
-              //       color: AppColors.kdepthGreyColor,
-              //       borderRadius: BorderRadius.circular(12),
-              //     ),
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(8.0),
-              //       child: RichText(
-              //         textAlign: TextAlign.center,
-              //         text: const TextSpan(
-              //           text: 'Greetings !\n\n',
-              //           style: TextStyle(
-              //               fontSize: 17,
-              //               letterSpacing: 1,
-              //               fontWeight: FontWeight.w800,
-              //               color: AppColors.kTextWhiteColor,
-              //               fontFamily: AppFonts.monaSansNormal),
-              //           children: [
-              //             TextSpan(
-              //                 text:
-              //                     //  "Greetings! I'm Sudheep AP, a Flutter Developer with over 2 years of hands-on experience. I specialize in creating user-centric and efficient mobile applications. My passion is to contribute to innovative projects, both as a freelancer and a valuable team member.",
-              //                     "I'm Sudheep AP,  a dedicated Flutter Developer with over 2 years of hands-on experience in creating robust and scalable mobile applications.\nMy passion lies in crafting clean, efficient, and user-friendly solutions that meet the evolving needs of the digital landscape.",
-              //                 style: TextStyle(
-              //                     fontSize: 15,
-              //                     // letterSpacing: 0.8,
-
-              //                     //fontWeight: FontWeight.w800,
-              //                     color: AppColors.kTextWhiteColor,
-              //                     fontFamily: AppFonts.monaSansNormal)),
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ),
               // ),
             ],
           ),
@@ -208,3 +122,14 @@ class _ProfileContentState extends State<ProfileContent>
 //                         borderRadius: BorderRadius.circular(20),
 //                         color: Color.fromARGB(255, 255, 255, 255)
 //                             .withOpacity(0.5)),
+
+
+
+
+
+
+
+
+
+
+
